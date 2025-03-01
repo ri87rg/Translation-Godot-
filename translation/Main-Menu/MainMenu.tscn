@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://6jskalg3f4aq"]
+
+[ext_resource type="Script" path="res://Main-Menu/Scripts/languagesManager.gd" id="1_ljshd"]
+[ext_resource type="Texture2D" uid="uid://8il1prnt6sa5" path="res://Main-Menu/Images/buildings_facades_moon_1287839_1920x1080.jpg" id="2_6qb1c"]
+[ext_resource type="FontFile" uid="uid://bscxx7lxorhvm" path="res://Main-Menu/Fonts/Roboto-VariableFont_wdth,wght.ttf" id="2_ed13c"]
+
+[node name="MainMenu" type="Control"]
+layout_direction = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ljshd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.552734, 0.326407, 0.393614, 1)
+
+[node name="English" type="Button" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 539.0
+offset_right = 35.0
+offset_bottom = 547.0
+theme_override_fonts/font = ExtResource("2_ed13c")
+text = "_ENGLISH"
+
+[node name="Arabic" type="Button" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 584.0
+offset_right = 91.0
+offset_bottom = 615.0
+theme_override_fonts/font = ExtResource("2_ed13c")
+text = "_ARABIC"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -114.0
+offset_right = -101.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ed13c")
+text = "_START_GAME"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ed13c")
+text = "_QUIT_GAME"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ed13c")
+text = "_SETTINGS"
+
+[node name="BuildingsFacadesMoon12878391920x1080" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(-672, -73)
+scale = Vector2(0.183073, 0.188426)
+texture = ExtResource("2_6qb1c")
+
+[connection signal="pressed" from="English" to="." method="_on_english_pressed"]
+[connection signal="pressed" from="Arabic" to="." method="_on_arabic_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]

@@ -1,0 +1,24 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="translation"
+run/main_scene="res://Main-Menu/MainMenu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[internationalization]
+
+locale/translation_remaps={
+"res://Main-Menu/Fonts/Roboto-VariableFont_wdth,wght.ttf": PackedStringArray("res://Main-Menu/Fonts/Roboto-VariableFont_wdth,wght.ttf:en", "res://Main-Menu/Fonts/NotoKufiArabic-VariableFont_wght.ttf:ar"),
+"res://Main-Menu/Images/buildings_facades_moon_1287839_1920x1080.jpg": PackedStringArray("res://Main-Menu/Images/buildings_facades_moon_1287839_1920x1080.jpg:en", "res://Main-Menu/Images/laptop_keys_gradient_167934_1920x1080.jpg:ar")
+}
+locale/translations=PackedStringArray("res://Languages/languages.ar.translation", "res://Languages/languages.en.translation")
