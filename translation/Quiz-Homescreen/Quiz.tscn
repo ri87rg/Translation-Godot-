@@ -1,0 +1,451 @@
+[gd_scene load_steps=17 format=3 uid="uid://d1bmtsutq01h3"]
+
+[ext_resource type="Texture2D" uid="uid://17lg6xghcl30" path="res://Quiz-Homescreen/Resources/Visuals/illustration.png" id="1_22n3f"]
+[ext_resource type="Texture2D" uid="uid://d371c1nkmij26" path="res://Quiz-Homescreen/Resources/Visuals/circle_512.png" id="2_7m6gp"]
+[ext_resource type="Texture2D" uid="uid://dralgty3a13l6" path="res://Quiz-Homescreen/Resources/Visuals/godot.png" id="3_3w1rx"]
+[ext_resource type="Texture2D" uid="uid://5eqbob51cf75" path="res://Quiz-Homescreen/Resources/Visuals/quiz.png" id="4_g4de1"]
+[ext_resource type="Texture2D" uid="uid://bxkiv3nujrwga" path="res://Quiz-Homescreen/Resources/Visuals/undraw_Halloween_re_2kq1.png" id="5_6i8yc"]
+[ext_resource type="FontFile" uid="uid://buk5ckdg3x568" path="res://Quiz-Homescreen/Resources/Fonts/Lato-Bold.ttf" id="6_wqodr"]
+[ext_resource type="Texture2D" uid="uid://dxh1sm56xa45v" path="res://Quiz-Homescreen/Resources/Visuals/coin.png" id="7_a0pam"]
+[ext_resource type="Texture2D" uid="uid://ba0wilkjov7ce" path="res://Quiz-Homescreen/Resources/Visuals/crown.png" id="8_h216i"]
+[ext_resource type="Texture2D" uid="uid://c4ihb6uamhuep" path="res://Quiz-Homescreen/Resources/Visuals/icons8-person-96.png" id="9_rq1o2"]
+[ext_resource type="Texture2D" uid="uid://0br7o5nubfrx" path="res://Quiz-Homescreen/Resources/Visuals/icons8-people-96.png" id="10_2wqnv"]
+
+[sub_resource type="Gradient" id="Gradient_fgdpp"]
+colors = PackedColorArray(1, 1, 1, 1, 0.674815, 0.674815, 0.674815, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ws87e"]
+gradient = SubResource("Gradient_fgdpp")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eqx10"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nyfh"]
+bg_color = Color(0.666667, 0.34902, 0.988235, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.709804, 0.458824, 0.992157, 1)
+corner_radius_top_left = 19
+corner_radius_top_right = 19
+corner_radius_bottom_right = 19
+corner_radius_bottom_left = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xyj8"]
+bg_color = Color(1, 0.992157, 0.0941176, 1)
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqgpf"]
+bg_color = Color(1, 0.992157, 0.0941176, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.709804, 0.458824, 0.992157, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="Quiz" type="Control"]
+layout_direction = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_ws87e")
+
+[node name="Screen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -172.0
+offset_top = -295.0
+offset_right = 172.0
+offset_bottom = 295.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Screen"]
+modulate = Color(0.462745, 0.145098, 0.941176, 1)
+clip_children = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eqx10")
+
+[node name="TextureRect" type="TextureRect" parent="Screen/Panel"]
+self_modulate = Color(1, 1, 1, 0.458824)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -325.0
+offset_top = 18.0
+offset_right = 316.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_22n3f")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 35.0
+offset_right = -10.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="TextureRect" parent="Screen/VBoxContainer"]
+self_modulate = Color(0.784314, 0.65098, 0.980392, 1)
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture = ExtResource("2_7m6gp")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Shadow" type="TextureRect" parent="Screen/VBoxContainer/Logo"]
+modulate = Color(0.635294, 0.380392, 0.945098, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 3.0
+offset_right = -4.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7m6gp")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="GODOT" type="TextureRect" parent="Screen/VBoxContainer/Logo"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -49.0
+offset_right = 53.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.113446
+pivot_offset = Vector2(67, 30)
+texture = ExtResource("3_3w1rx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QUIZ" type="TextureRect" parent="Screen/VBoxContainer/Logo"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -3.0
+offset_right = 84.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.113446
+pivot_offset = Vector2(59, 24)
+texture = ExtResource("4_g4de1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VSeparator" type="VSeparator" parent="Screen/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="CircleMask" type="TextureRect" parent="Screen/VBoxContainer"]
+clip_children = 2
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+texture = ExtResource("2_7m6gp")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Avatar" type="TextureRect" parent="Screen/VBoxContainer/CircleMask"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_6i8yc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_wqodr")
+theme_override_font_sizes/font_size = 28
+text = "NICKNAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="Screen/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Panel" type="Panel" parent="Screen/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nyfh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 8.0
+offset_right = -20.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="ProgressBar" type="ProgressBar" parent="Screen/VBoxContainer/HBoxContainer/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_2xyj8")
+show_percentage = false
+
+[node name="Coin" type="TextureRect" parent="Screen/VBoxContainer/HBoxContainer/Panel/HBoxContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 31.0
+offset_bottom = 28.0
+grow_vertical = 2
+texture = ExtResource("7_a0pam")
+expand_mode = 1
+
+[node name="Shadow" type="TextureRect" parent="Screen/VBoxContainer/HBoxContainer/Panel/HBoxContainer/ProgressBar/Coin"]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 0.411765)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_a0pam")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="Screen/VBoxContainer/HBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_wqodr")
+theme_override_font_sizes/font_size = 13
+text = "800"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Screen/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nyfh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 8.0
+offset_right = -20.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="ProgressBar" type="ProgressBar" parent="Screen/VBoxContainer/HBoxContainer/Panel2/HBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_2xyj8")
+show_percentage = false
+
+[node name="Crown" type="TextureRect" parent="Screen/VBoxContainer/HBoxContainer/Panel2/HBoxContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -37.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_vertical = 2
+texture = ExtResource("8_h216i")
+expand_mode = 1
+
+[node name="Shadow" type="TextureRect" parent="Screen/VBoxContainer/HBoxContainer/Panel2/HBoxContainer/ProgressBar/Crown"]
+self_modulate = Color(0.411765, 0.411765, 0.411765, 0.411765)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 3.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_h216i")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="Screen/VBoxContainer/HBoxContainer/Panel2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_wqodr")
+theme_override_font_sizes/font_size = 13
+text = "800"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="Screen/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_direction = 1
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqgpf")
+icon_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 81.0
+offset_top = 6.0
+offset_right = -81.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/VBoxContainer/Button/HBoxContainer"]
+self_modulate = Color(0.301961, 0.0941176, 0.654902, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("9_rq1o2")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Button/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.301961, 0.0941176, 0.654902, 1)
+text = "SINGLE_PLAYER"
+
+[node name="Button2" type="Button" parent="Screen/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_direction = 1
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wqgpf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqgpf")
+icon_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 81.0
+offset_top = 6.0
+offset_right = -81.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/VBoxContainer/Button2/HBoxContainer"]
+self_modulate = Color(0.301961, 0.0941176, 0.654902, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("10_2wqnv")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Button2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.301961, 0.0941176, 0.654902, 1)
+text = "MULTI_PLAYER"

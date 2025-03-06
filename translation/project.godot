@@ -21,4 +21,4 @@ locale/translation_remaps={
 "res://Main-Menu/Fonts/Roboto-VariableFont_wdth,wght.ttf": PackedStringArray("res://Main-Menu/Fonts/Roboto-VariableFont_wdth,wght.ttf:en", "res://Main-Menu/Fonts/NotoKufiArabic-VariableFont_wght.ttf:ar"),
 "res://Main-Menu/Images/buildings_facades_moon_1287839_1920x1080.jpg": PackedStringArray("res://Main-Menu/Images/buildings_facades_moon_1287839_1920x1080.jpg:en", "res://Main-Menu/Images/laptop_keys_gradient_167934_1920x1080.jpg:ar")
 }
-locale/translations=PackedStringArray("res://Languages/languages.ar.translation", "res://Languages/languages.en.translation")
+locale/translations=PackedStringArray("res://Languages/Languages.ar.translation", "res://Languages/Languages.en.translation")
