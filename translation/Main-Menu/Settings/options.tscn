@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dr6ovdvlj8q4"]
+[gd_scene load_steps=3 format=3 uid="uid://dr6ovdvlj8q4"]
 
 [ext_resource type="Script" path="res://Main-Menu/Settings/options.gd" id="1_mmff0"]
+[ext_resource type="Theme" uid="uid://j2ejg0slh084" path="res://Main-Menu/GeneralTheme/General.tres" id="2_2pla5"]
 
 [node name="Options" type="Control"]
 layout_direction = 2
@@ -40,6 +41,7 @@ layout_mode = 2
 
 [node name="Back" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_2pla5")
 text = "_GO_BACK"
 
 [connection signal="item_selected" from="VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]

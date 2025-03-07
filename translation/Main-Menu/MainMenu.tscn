@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://6jskalg3f4aq"]
+[gd_scene load_steps=5 format=3 uid="uid://6jskalg3f4aq"]
 
 [ext_resource type="Script" path="res://Main-Menu/Scripts/languagesManager.gd" id="1_ljshd"]
 [ext_resource type="Texture2D" uid="uid://8il1prnt6sa5" path="res://Main-Menu/Images/buildings_facades_moon_1287839_1920x1080.jpg" id="2_6qb1c"]
 [ext_resource type="FontFile" uid="uid://bscxx7lxorhvm" path="res://Main-Menu/Fonts/Roboto-VariableFont_wdth,wght.ttf" id="2_ed13c"]
+[ext_resource type="Theme" uid="uid://j2ejg0slh084" path="res://Main-Menu/GeneralTheme/General.tres" id="2_lbuos"]
 
 [node name="MainMenu" type="Control"]
 layout_direction = 2
@@ -38,17 +39,23 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="Start" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
+theme = ExtResource("2_lbuos")
 theme_override_fonts/font = ExtResource("2_ed13c")
 text = "_START_GAME"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
+theme = ExtResource("2_lbuos")
 theme_override_fonts/font = ExtResource("2_ed13c")
 text = "_QUIT_GAME"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
+theme = ExtResource("2_lbuos")
 theme_override_fonts/font = ExtResource("2_ed13c")
 text = "_SETTINGS"
 
@@ -58,4 +65,5 @@ scale = Vector2(0.183073, 0.188426)
 texture = ExtResource("2_6qb1c")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
