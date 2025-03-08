@@ -51,3 +51,11 @@ func page_animation() -> void:
 	tween_page.parallel().tween_property(progress_bar_container, "modulate:a", 1.0, 0.5).from(0.0)
 	tween_page.parallel().tween_property(button_container, "modulate:a", 1.0, 0.5).from(0.0)
 	tween_page.tween_callback(star_partical.restart)
+
+
+func _on_button_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://Main-Menu/MainMenu.tscn")
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/level_up.tscn")

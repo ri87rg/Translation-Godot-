@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d1bmtsutq01h3"]
+[gd_scene load_steps=21 format=3 uid="uid://d1bmtsutq01h3"]
 
 [ext_resource type="Script" path="res://Quiz-Homescreen/Script/quiz.gd" id="1_4a1cd"]
 [ext_resource type="Texture2D" uid="uid://17lg6xghcl30" path="res://Quiz-Homescreen/Resources/Visuals/illustration.png" id="1_22n3f"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dxh1sm56xa45v" path="res://Quiz-Homescreen/Resources/Visuals/coin.png" id="7_a0pam"]
 [ext_resource type="Texture2D" uid="uid://ba0wilkjov7ce" path="res://Quiz-Homescreen/Resources/Visuals/crown.png" id="8_h216i"]
 [ext_resource type="Texture2D" uid="uid://c4ihb6uamhuep" path="res://Quiz-Homescreen/Resources/Visuals/icons8-person-96.png" id="9_rq1o2"]
-[ext_resource type="Texture2D" uid="uid://0br7o5nubfrx" path="res://Quiz-Homescreen/Resources/Visuals/icons8-people-96.png" id="10_2wqnv"]
 
 [sub_resource type="Gradient" id="Gradient_fgdpp"]
 colors = PackedColorArray(1, 1, 1, 1, 0.674815, 0.674815, 0.674815, 1)
@@ -469,7 +468,7 @@ expand_mode = 3
 [node name="Label" type="Label" parent="Screen/VBoxContainer/ButtonContainer/Button/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.301961, 0.0941176, 0.654902, 1)
-text = "SINGLE_PLAYER"
+text = "_SINGLE_PLAYER"
 
 [node name="Button2" type="Button" parent="Screen/VBoxContainer/ButtonContainer"]
 custom_minimum_size = Vector2(0, 50)
@@ -500,14 +499,11 @@ offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/ButtonContainer/Button2/HBoxContainer"]
-self_modulate = Color(0.301961, 0.0941176, 0.654902, 1)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("10_2wqnv")
-expand_mode = 3
-
 [node name="Label" type="Label" parent="Screen/VBoxContainer/ButtonContainer/Button2/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 6
 theme_override_colors/font_color = Color(0.301961, 0.0941176, 0.654902, 1)
-text = "MULTI_PLAYER"
+text = "_GO_BACK"
+
+[connection signal="pressed" from="Screen/VBoxContainer/ButtonContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Screen/VBoxContainer/ButtonContainer/Button2" to="." method="_on_button_2_pressed"]

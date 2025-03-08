@@ -1,12 +1,14 @@
-[gd_scene load_steps=24 format=3 uid="uid://cxtotxoulejdi"]
+[gd_scene load_steps=27 format=3 uid="uid://cxtotxoulejdi"]
 
 [ext_resource type="FontFile" uid="uid://hg2jv80be4q0" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Fonts/Signika-Medium.ttf" id="1_p8bjl"]
+[ext_resource type="Script" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Script/level_up.gd" id="1_tne8e"]
 [ext_resource type="Texture2D" uid="uid://cxijser3bjbeu" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/rounded_rect.png" id="1_vkwa3"]
 [ext_resource type="Texture2D" uid="uid://nhvcbbritjbh" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/rays.png" id="2_1iexa"]
 [ext_resource type="Texture2D" uid="uid://cfiaw32ran5c0" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/shield.png" id="3_dp2gy"]
 [ext_resource type="FontFile" uid="uid://cubgor0scncw3" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Fonts/Signika-Bold.ttf" id="4_0tmwj"]
 [ext_resource type="Texture2D" uid="uid://d0dyxsxekxeef" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/wing.png" id="4_rrwtd"]
 [ext_resource type="Texture2D" uid="uid://c6qr2ycaa7mhm" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/wing_l.png" id="5_l5q0o"]
+[ext_resource type="Shader" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Shader/shield.gdshader" id="6_abvl7"]
 [ext_resource type="Texture2D" uid="uid://cjxxbn167u2p1" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/ribbon.png" id="6_ba3it"]
 [ext_resource type="Texture2D" uid="uid://d3cunrlad0kms" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/bomb.png" id="8_a70aa"]
 [ext_resource type="FontFile" uid="uid://c0gv3amc3ba2i" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Fonts/Signika-Regular.ttf" id="9_wc8uq"]
@@ -70,6 +72,15 @@ damping_max = 24.351
 scale_curve = SubResource("CurveTexture_ie0jx")
 color_ramp = SubResource("GradientTexture1D_k6ywx")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0sln3"]
+shader = ExtResource("6_abvl7")
+shader_parameter/rect_size = Vector2(285.216, 268)
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w8ed"]
 bg_color = Color(0.0784314, 0.164706, 0.352941, 1)
 border_width_left = 2
@@ -88,12 +99,14 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [node name="LevelUp" type="Control"]
+layout_direction = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tne8e")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
@@ -170,11 +183,13 @@ offset_right = 324.0
 offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(324, 260)
 texture = ExtResource("2_1iexa")
 expand_mode = 3
 stretch_mode = 5
 
 [node name="Shield" type="TextureRect" parent="Anchor"]
+material = SubResource("ShaderMaterial_0sln3")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -187,6 +202,7 @@ offset_right = 142.608
 offset_bottom = 134.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(142.608, 134)
 texture = ExtResource("3_dp2gy")
 expand_mode = 3
 stretch_mode = 5
