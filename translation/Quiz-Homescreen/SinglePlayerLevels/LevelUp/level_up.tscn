@@ -1,0 +1,452 @@
+[gd_scene load_steps=24 format=3 uid="uid://cxtotxoulejdi"]
+
+[ext_resource type="FontFile" uid="uid://hg2jv80be4q0" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Fonts/Signika-Medium.ttf" id="1_p8bjl"]
+[ext_resource type="Texture2D" uid="uid://cxijser3bjbeu" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/rounded_rect.png" id="1_vkwa3"]
+[ext_resource type="Texture2D" uid="uid://nhvcbbritjbh" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/rays.png" id="2_1iexa"]
+[ext_resource type="Texture2D" uid="uid://cfiaw32ran5c0" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/shield.png" id="3_dp2gy"]
+[ext_resource type="FontFile" uid="uid://cubgor0scncw3" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Fonts/Signika-Bold.ttf" id="4_0tmwj"]
+[ext_resource type="Texture2D" uid="uid://d0dyxsxekxeef" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/wing.png" id="4_rrwtd"]
+[ext_resource type="Texture2D" uid="uid://c6qr2ycaa7mhm" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/wing_l.png" id="5_l5q0o"]
+[ext_resource type="Texture2D" uid="uid://cjxxbn167u2p1" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/ribbon.png" id="6_ba3it"]
+[ext_resource type="Texture2D" uid="uid://d3cunrlad0kms" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/bomb.png" id="8_a70aa"]
+[ext_resource type="FontFile" uid="uid://c0gv3amc3ba2i" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Fonts/Signika-Regular.ttf" id="9_wc8uq"]
+[ext_resource type="Texture2D" uid="uid://c0qwpbrunt6kb" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/clover.png" id="10_0ub7a"]
+[ext_resource type="Texture2D" uid="uid://df6y01hncvwpv" path="res://Quiz-Homescreen/SinglePlayerLevels/LevelUp/Resources/Visuals/heart.png" id="11_scfjw"]
+
+[sub_resource type="Gradient" id="Gradient_wmbj3"]
+offsets = PackedFloat32Array(0, 0.462069, 1)
+colors = PackedColorArray(0, 0.274867, 0.648128, 1, 0.0311636, 0.226066, 0.560111, 1, 4.57242e-05, 0.15749, 0.511809, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u1ysq"]
+gradient = SubResource("Gradient_wmbj3")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="Gradient" id="Gradient_8oye8"]
+offsets = PackedFloat32Array(0, 0.294372, 0.973451)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.670588, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_k6ywx"]
+gradient = SubResource("Gradient_8oye8")
+
+[sub_resource type="Curve" id="Curve_slkyt"]
+_data = [Vector2(0.011583, 0.467897), 0.0, 0.538338, 0, 1, Vector2(1, 1), 0.900748, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ie0jx"]
+curve = SubResource("Curve_slkyt")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ceglr"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(576, 324, 1)
+angle_min = -720.0
+angle_max = 720.0
+gravity = Vector3(0, -15, 0)
+scale_min = 0.01
+scale_max = 0.12
+scale_curve = SubResource("CurveTexture_ie0jx")
+color_ramp = SubResource("GradientTexture1D_k6ywx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u227k"]
+particle_flag_disable_z = true
+spread = 0.0
+initial_velocity_min = 80.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, -23, 0)
+damping_min = 24.351
+damping_max = 24.351
+scale_curve = SubResource("CurveTexture_ie0jx")
+color_ramp = SubResource("GradientTexture1D_k6ywx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2kwoo"]
+particle_flag_disable_z = true
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 80.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, -23, 0)
+damping_min = 24.351
+damping_max = 24.351
+scale_curve = SubResource("CurveTexture_ie0jx")
+color_ramp = SubResource("GradientTexture1D_k6ywx")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w8ed"]
+bg_color = Color(0.0784314, 0.164706, 0.352941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.231373, 0.454902, 0.992157, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oecbs"]
+bg_color = Color(0.231373, 0.454902, 0.992157, 1)
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="LevelUp" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_u1ysq")
+
+[node name="BGParticles" type="GPUParticles2D" parent="."]
+position = Vector2(576, 324)
+amount = 31
+process_material = SubResource("ParticleProcessMaterial_ceglr")
+texture = ExtResource("1_vkwa3")
+lifetime = 4.5
+randomness = 0.35
+
+[node name="RWingParticles" type="GPUParticles2D" parent="."]
+position = Vector2(706, 231)
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_u227k")
+texture = ExtResource("4_rrwtd")
+lifetime = 1.6
+
+[node name="LWingParticles" type="GPUParticles2D" parent="."]
+position = Vector2(430, 231)
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_2kwoo")
+texture = ExtResource("5_l5q0o")
+lifetime = 1.6
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -271.5
+offset_top = 43.0
+offset_right = 271.5
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_p8bjl")
+theme_override_font_sizes/font_size = 40
+text = "You have reached a new level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Anchor" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -226.0
+offset_right = 20.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Rays" type="TextureRect" parent="Anchor"]
+self_modulate = Color(1, 0.839216, 0.329412, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = -260.0
+offset_right = 324.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1iexa")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Shield" type="TextureRect" parent="Anchor"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.608
+offset_top = -134.0
+offset_right = 142.608
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dp2gy")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Level" type="Label" parent="Anchor/Shield"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.6077
+offset_top = 63.0
+offset_right = 55.3923
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.839216, 0.329412, 1)
+theme_override_fonts/font = ExtResource("1_p8bjl")
+theme_override_font_sizes/font_size = 32
+text = "LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelNb" type="Label" parent="Anchor/Shield"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.6077
+offset_top = -42.0
+offset_right = 59.3923
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_0tmwj")
+theme_override_font_sizes/font_size = 105
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RWing" type="TextureRect" parent="Anchor/Shield"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -84.6077
+offset_top = -74.0
+offset_right = 87.3923
+offset_bottom = 78.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("4_rrwtd")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="LWing" type="TextureRect" parent="Anchor/Shield"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = -74.0
+offset_right = -59.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_l5q0o")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="LevelUp" type="Label" parent="Anchor"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -137.5
+offset_top = -1.0
+offset_right = 137.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.839216, 0.329412, 1)
+theme_override_fonts/font = ExtResource("4_0tmwj")
+theme_override_font_sizes/font_size = 60
+text = "LEVEL UP!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ribbon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -182.0
+offset_right = 145.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_ba3it")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Rewards" type="Label" parent="Ribbon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -22.0
+offset_right = 63.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_p8bjl")
+theme_override_font_sizes/font_size = 25
+text = "REWARDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RewardsContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -115.0
+offset_top = -105.0
+offset_right = 115.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="RewardsContainer"]
+custom_minimum_size = Vector2(70, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0w8ed")
+
+[node name="TextureRect" type="TextureRect" parent="RewardsContainer/Button"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 58.0
+grow_horizontal = 2
+texture = ExtResource("8_a70aa")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="RewardsContainer/Button"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oecbs")
+
+[node name="Label" type="Label" parent="RewardsContainer/Button/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_wc8uq")
+theme_override_font_sizes/font_size = 16
+text = "Bomb"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="RewardsContainer"]
+custom_minimum_size = Vector2(70, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0w8ed")
+
+[node name="TextureRect" type="TextureRect" parent="RewardsContainer/Button2"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 58.0
+grow_horizontal = 2
+texture = ExtResource("10_0ub7a")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="RewardsContainer/Button2"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oecbs")
+
+[node name="Label" type="Label" parent="RewardsContainer/Button2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_wc8uq")
+theme_override_font_sizes/font_size = 16
+text = "clover"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="RewardsContainer"]
+custom_minimum_size = Vector2(70, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0w8ed")
+
+[node name="TextureRect" type="TextureRect" parent="RewardsContainer/Button3"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 58.0
+grow_horizontal = 2
+texture = ExtResource("11_scfjw")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="RewardsContainer/Button3"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oecbs")
+
+[node name="Label" type="Label" parent="RewardsContainer/Button3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_wc8uq")
+theme_override_font_sizes/font_size = 16
+text = "Heart"
+horizontal_alignment = 1
+vertical_alignment = 1

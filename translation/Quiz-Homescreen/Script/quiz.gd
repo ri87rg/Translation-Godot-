@@ -14,7 +14,6 @@ var tween_logo: Tween
 @onready var avatar_container: VBoxContainer = $Screen/VBoxContainer/AvatarContainer
 @onready var progress_bar_container: HBoxContainer = $Screen/VBoxContainer/ProgressBarContainer
 @onready var button_container: VBoxContainer = $Screen/VBoxContainer/ButtonContainer
-
 var tween_page: Tween
 
 func _ready() -> void:
@@ -43,7 +42,7 @@ func logo_animation() -> void:
 	tween_logo.parallel().tween_property(godot, "self_modulate:a", 1.0, 0.5).from(0.0)
 	tween_logo.parallel().tween_property(quiz, "position", quiz_final_pos, 0.6).from(quiz_final_pos + Vector2(255, 0))
 	tween_logo.parallel().tween_property(quiz, "self_modulate:a", 1.0, 0.5).from(0.0)
-	tween_logo.tween_callback(star_partical.restart)
+	
 
 func page_animation() -> void:
 	tween_page = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
@@ -51,3 +50,4 @@ func page_animation() -> void:
 	tween_page.tween_property(avatar_container, "modulate:a", 1.0, 0.5).from(0.0)
 	tween_page.parallel().tween_property(progress_bar_container, "modulate:a", 1.0, 0.5).from(0.0)
 	tween_page.parallel().tween_property(button_container, "modulate:a", 1.0, 0.5).from(0.0)
+	tween_page.tween_callback(star_partical.restart)
